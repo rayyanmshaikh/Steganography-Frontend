@@ -30,35 +30,31 @@ export default function SteganographyFrontend() {
 
   return (
     <Layout>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="space-y-6">
-          <div className="bg-white rounded-lg shadow-sm border p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
-              Select Image
-            </h2>
-            <FileUpload
-              onFileSelect={handleFileSelect}
-              fileInputRef={fileInputRef}
-              previewUrl={previewUrl}
-              capacity={capacity}
-            />
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div>
+          <h2 className="text-lg font-medium text-gray-900 mb-4">
+            Select Image
+          </h2>
+          <FileUpload
+            onFileSelect={handleFileSelect}
+            fileInputRef={fileInputRef}
+            previewUrl={previewUrl}
+            capacity={capacity}
+          />
         </div>
 
-        <div className="space-y-6">
-          <div className="bg-white rounded-lg shadow-sm border p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
-              Message Operations
-            </h2>
-            <TextInput
-              text={text}
-              setText={setText}
-              capacity={capacity}
-              onEncode={encodeText}
-              onDecode={decodeText}
-              loading={loading}
-            />
-          </div>
+        <div>
+          <h2 className="text-lg font-medium text-gray-900 mb-4">
+            Message
+          </h2>
+          <TextInput
+            text={text}
+            setText={setText}
+            capacity={capacity}
+            onEncode={encodeText}
+            onDecode={decodeText}
+            loading={loading}
+          />
         </div>
       </div>
 
@@ -69,7 +65,6 @@ export default function SteganographyFrontend() {
           decodedText={decodedText}
         />
       </div>
-
     </Layout>
   );
 }
