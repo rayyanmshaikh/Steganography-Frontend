@@ -39,7 +39,7 @@ Refer to the provided Spring Boot `StegController` for the backend implementatio
    npm start
    ```
 
-4. Open the app in your browser at `http://localhost:8080`
+4. Open the app in your browser at `http://localhost:5173`
 
 ## Usage
 1. Select or drag & drop an image.
