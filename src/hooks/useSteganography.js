@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import steganographyApi from "../services/steganographyApi";
-import { MESSAGES, FILE_NAMES } from "../constants/index.js";
+import { MESSAGES, FILE_CONFIG } from "../config/index.js";
 import {
   calculateImageCapacity,
   isValidImageFile,
@@ -94,7 +94,7 @@ export function useSteganography() {
 
     try {
       const blob = await steganographyApi.encodeText(imageFile, text);
-      downloadBlob(blob, FILE_NAMES.ENCODED_IMAGE);
+      downloadBlob(blob, FILE_CONFIG.ENCODED_IMAGE_NAME);
       setStatus(MESSAGES.ENCODE_SUCCESS);
     } catch (err) {
       setError(MESSAGES.ENCODE_FAILED.replace("{error}", err.message));

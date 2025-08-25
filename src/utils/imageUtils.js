@@ -1,4 +1,4 @@
-import { CAPACITY_FORMULA, FILE_NAMES } from "../constants/index.js";
+import { CAPACITY_FORMULA, FILE_CONFIG } from "../config/index.js";
 
 /**
  * Utility functions for image processing and file handling
@@ -38,7 +38,7 @@ export function isValidImageFile(file) {
 /**
  * Download a blob as a file
  */
-export function downloadBlob(blob, filename = FILE_NAMES.ENCODED_IMAGE) {
+export function downloadBlob(blob, filename = FILE_CONFIG.ENCODED_IMAGE_NAME) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
