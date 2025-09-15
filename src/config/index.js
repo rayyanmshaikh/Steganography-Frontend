@@ -12,8 +12,8 @@ export const API_CONFIG = {
 
 // API Endpoints
 export const API_ENDPOINTS = {
-  ENCODE: "/api/encodeTI",
-  DECODE: "/api/decodeTI",
+  TIENCODE: "/api/text-in-image/encodeTI",
+  TIDECODE: "/api/text-in-image/decodeTI",
 };
 
 // File Configuration

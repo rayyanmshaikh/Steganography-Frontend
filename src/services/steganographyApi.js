@@ -67,12 +67,12 @@ class SteganographyApi {
   async encodeText(imageFile, text) {
     const requestFn = async () => {
       const formData = new FormData();
-      formData.append("image", imageFile);
+      formData.append("carrier", imageFile);
       formData.append("text", text);
 
       const url = this.baseUrl
-        ? `${this.baseUrl}${API_ENDPOINTS.ENCODE}`
-        : getApiUrl(API_ENDPOINTS.ENCODE);
+        ? `${this.baseUrl}${API_ENDPOINTS.TIENCODE}`
+        : getApiUrl(API_ENDPOINTS.TIENCODE);
 
       const response = await this.fetchWithTimeout(url, {
         method: "POST",
@@ -95,11 +95,11 @@ class SteganographyApi {
   async decodeText(imageFile) {
     const requestFn = async () => {
       const formData = new FormData();
-      formData.append("image", imageFile);
+      formData.append("carrier", imageFile);
 
       const url = this.baseUrl
-        ? `${this.baseUrl}${API_ENDPOINTS.DECODE}`
-        : getApiUrl(API_ENDPOINTS.DECODE);
+        ? `${this.baseUrl}${API_ENDPOINTS.TIDECODE}`
+        : getApiUrl(API_ENDPOINTS.TIDECODE);
 
       const response = await this.fetchWithTimeout(url, {
         method: "POST",
