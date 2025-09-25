@@ -1,6 +1,6 @@
 # Steganography Frontend
 
-This project is a simple React frontend for the **Image Steganography (LSB)** backend implemented in Spring Boot. It allows you to:
+This project is a simple React frontend for the [**Image Steganography (LSB)**](https://github.com/rayyanmshaikh/Steganography) backend implemented in Spring Boot. It allows you to:
 
 - Upload an image (PNG, JPEG, JPG)
 - Encode a secret text message into the image
